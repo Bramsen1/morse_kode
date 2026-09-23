@@ -27,23 +27,33 @@ morseCode = {"A":".-",
              "Z":"--..",
              "Æ":".-.-",
              "Ø":"---.",
-             "Å":".--.-"}
+             "Å":".--.-",
+             " ":"/"}
 
 # Dictionary til oversættelse fra morsekode til bogstaver. Tomt oversættes til mellemrum.
 morseCodeReverse = {}
 
 # Denne funktion oversætter et enkelt bogstav (letter) med opslag i dictionay (code) hvis muligt
 def translate(letter, code):
-    pass
+    if letter in morseCode:
+        return code[letter]
+    else:print("?")
 
 # Denne funktion oversætter en vilkårlig tekststreng til morsekode
 # '/' markerer nyt bogstav
 # '//' markerer nyt ord
 def encodeMessage(message, code):
-    pass
+    if message in morseCode:
+        return code[code]
+    else:
+        print("?")
+
+
+print(translate("M", morseCode))
 
 # Denne funktion oversætter en korrekt formatteret morsebesked til bogstaver
 # '/' markerer nyt bogstav
 # '//' markerer nyt ord
 def decodeMessage(message, code):
     pass
+
