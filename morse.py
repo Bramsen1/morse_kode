@@ -1,5 +1,33 @@
 # Dictionary til oversættelse fra bogstaver til morsekode
-morseCode = {}
+morseCode = {"A":"· —",
+             "B":"— · · ·",
+             "C":"— · — ·",
+             "D":"— · ·",
+             "E":"·",
+             "F":"· · — ·",
+             "G":"— — ·",
+             "H":"· · · ·",
+             "I":"· ·",
+             "J":"· — — —",
+             "K":"— · —",
+             "L":"· — · ·",
+             "N":"— ·",
+             "M":"— —",
+             "O":"— — —",
+             "P":"· — — ·",
+             "Q:":"— — · —",
+             "R":"· — ·",
+             "S:":"· · ·",
+             "T":"—",
+             "U":"· · —	",
+             "V":"· · · —",
+             "W":"· — —	",
+             "X":"— · · —",
+             "Y":"— · — —",
+             "Z":"— — · ·",
+             "Æ":"· — · —",
+             "Ø":"— — — ·",
+             "Å":"· — — · —"}
 
 # Dictionary til oversættelse fra morsekode til bogstaver. Tomt oversættes til mellemrum.
 morseCodeReverse = {}
