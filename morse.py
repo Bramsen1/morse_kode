@@ -36,7 +36,7 @@ morseCodeReverse = {}
 # Denne funktion oversætter et enkelt bogstav (letter) med opslag i dictionay (code) hvis muligt
 def translate(letter, code):
     letter = letter.upper()
-    if letter in morseCode:
+    if letter in code:
         return code[letter]
     else:
         return "?"
@@ -50,15 +50,31 @@ def encodeMessage(message, code):
     for letter in message:
         oversat += translate(letter, code)+"/"
     return oversat
-    print(encodeMessage("A", morseCode))
+
+print(encodeMessage("Viktor er sej", morseCode))
 
 
+def flip_dict(to_flip):
+    flipped = {}
+    for key, value in to_flip.items():
+        flipped[value] = key
+    return flipped
 
 
 # Denne funktion oversætter en korrekt formatteret morsebesked til bogstaver
 # '/' markerer nyt bogstav
 # '//' markerer nyt ord
 def decodeMessage(message, code):
-    pass
+    oversat = ""
+    message = message.split("/")
+    for letter in message:
+        oversat += translate(letter, code) + "/"
+    return oversat
 
-print(encodeMessage("Viktor er sej", morseCode))
+morseCodeReverse = flip_dict(morseCode)
+
+print(decodeMessage(".--./.-./---/--./.-./.-/--/--/./.-./../-./--.//./.-.//.../.---/---/...-/-/-.-.--//", morseCodeReverse))
+
+
+
+
